@@ -33,18 +33,20 @@ const Testimonials = () => {
   const { name, avatar, review, stars } = data[currentIndex];
 
   return (
-    <section className="py-10 bg-gray-50">
+    <section className="py-10 bg-gray-50 px-10">
       <h2 className="text-3xl font-bold text-center mb-8">
         What Our Customers Say
       </h2>
 
-      <div className="max-w-xl mx-auto bg-white shadow-md rounded-lg p-8 flex flex-col items-center">
+      <div className="max-w-xl mx-auto bg-white shadow-md rounded-lg p-6 sm:p-8 flex flex-col items-center">
         <img
           src={avatar}
           alt={name}
-          className="w-20 h-20 rounded-full mb-4"
+          className="w-20 h-20 rounded-full mb-4 sm:w-24 sm:h-24"
         />
-        <p className="text-lg text-center italic mb-4">"{review}"</p>
+        <p className="text-lg text-center italic mb-4 sm:text-xl">
+          "{review}"
+        </p>
 
         <div className="flex space-x-1 mb-4">
           {Array.from({ length: stars || 0 }).map((_, i) => (
@@ -60,18 +62,18 @@ const Testimonials = () => {
           ))}
         </div>
 
-        <h3 className="text-xl font-medium">{name}</h3>
+        <h3 className="text-xl font-medium mb-4">{name}</h3>
 
-        <div className="flex space-x-4 mt-6">
+        <div className="flex space-x-4 mt-6 sm:mt-8">
           <button
             onClick={prevTestimonial}
-            className="px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300"
+            className="px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 sm:px-6 sm:py-3"
           >
             Previous
           </button>
           <button
             onClick={nextTestimonial}
-            className="px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300"
+            className="px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300 sm:px-6 sm:py-3"
           >
             Next
           </button>

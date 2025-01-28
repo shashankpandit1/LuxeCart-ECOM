@@ -110,7 +110,7 @@ const FeaturedProducts = () => {
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-5 lg:px-20 pt-16"> {/* Added pt-16 to create space for the messages */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-5 lg:px-20 pt-16">
         {featuredProducts.map((product) => (
           <ProductCard
             key={product._id}  // Changed from product.id to product._id

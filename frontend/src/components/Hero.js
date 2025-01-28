@@ -23,7 +23,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="relative h-[500px] lg:h-screen p-0 m-0 overflow-hidden ">
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -31,19 +31,20 @@ const Hero = () => {
             currentSlide === index ? "opacity-100" : "opacity-0"
           } flex items-center`}
         >
-          <div className="relative flex flex-col items-center justify-between w-full h-full px-10 space-y-5 lg:flex-row lg:space-y-0 lg:space-x-10">
+          <div className="relative flex flex-col items-center  md:justify-between w-full h-full px-10 space-y-5 md:flex-row md:space-y-0 md:space-x-10">
             {/* Text Section */}
-            <div className="flex flex-col justify-center w-2/5 ml-5">
+            <div className="flex flex-col justify-center mt-5 mb-5 md:w-2/5 lg:ml-5">
               <h1 className="max-w-xl font-serif text-4xl md:text-6xl">
                 <span className=" decoration-black decoration-4">
-                Redefine 
-                </span>{" "}
-                your Luxury
+                Redefine your
+                </span> 
+                <br />
+                Luxury
               </h1>
               <br></br>
-              <h2 className="w-9/12 font-normal ">
+              <p className="w-full sm:text-xs md:text-sm lg:text-base">
               Flash Sale: 20% Off Designer Wear
-              </h2>
+              </p>
               <br />
               <button className="px-4 py-2 font-medium transition duration-100 bg-white border border-black rounded-full active:scale-90">
               Explore Deals
@@ -51,7 +52,7 @@ const Hero = () => {
             </div>
 
             {/* Image Section */}
-            <div className="flex justify-center w-3/5">
+            <div className="flex justify-center md:w-3/5">
               <img
                 src={slide.image}
                 alt={slide.text}
